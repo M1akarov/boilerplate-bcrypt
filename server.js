@@ -29,6 +29,10 @@ bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
 //END_ASYNC
 
 //START_SYNC
+const hash = bcrypt.hashSync(myPlaintextPassword, saltRounds);
+console.log(hash);
+const result = bcrypt.compareSync(myPlaintextPassword, hash);
+console.log(result);
 
 
 
